@@ -38,16 +38,20 @@
     
     
     //代码防护
-    Method method1 = class_getInstanceMethod(self.class, @selector(loginBtn));
-    Method method2 = class_getInstanceMethod(self.class, @selector(my_login));
-    method_exchangeImplementations(method1, method2);
+//    Method method1 = clZton];
     
-    UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake((self.view.frame.size.width - 200)/2.0, 100, 200, 40)];
-    button.backgroundColor = [UIColor grayColor];
-    [button setTitle:@"登录" forState:UIControlStateNormal];
-    [button addTarget:self action:@selector(loginBtn) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:button];
+    struct rebinding imp;
+    imp.name = "random";
+    imp.replacement = my_random;
+    imp.replaced = &sys_random;
+    struct rebinding rebs[1] = {imp};
+    rebind_symbols(rebs, 1);
 }
+long my_random() {
+    return 6;
+}
+/// 存放系统函数地址
+static long (*sys_random)();
 
 
 - (void)loginBtn {
@@ -68,7 +72,7 @@
 //    struct rebinding rebs[1] = {imp};
 //    rebind_symbols(rebs, 1);
 //}
-//
+
 ///// 存放系统交换方法函数地址
 //static void (*sys_method_imp)(Method method1, Method method2);
 ///// 替换原系统函数，监控函数是否被调用
