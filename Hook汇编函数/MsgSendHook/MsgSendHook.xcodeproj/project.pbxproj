@@ -1,0 +1,632 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		057C397D28ABEF3600D201F0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 057C397C28ABEF3600D201F0 /* AppDelegate.m */; };
+		057C398028ABEF3600D201F0 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 057C397F28ABEF3600D201F0 /* SceneDelegate.m */; };
+		057C398328ABEF3600D201F0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 057C398228ABEF3600D201F0 /* ViewController.m */; };
+		057C398628ABEF3600D201F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 057C398428ABEF3600D201F0 /* Main.storyboard */; };
+		057C398828ABEF3900D201F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 057C398728ABEF3900D201F0 /* Assets.xcassets */; };
+		057C398B28ABEF3900D201F0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 057C398928ABEF3900D201F0 /* LaunchScreen.storyboard */; };
+		057C398E28ABEF3900D201F0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 057C398D28ABEF3900D201F0 /* main.m */; };
+		057C399828ABEF3A00D201F0 /* MsgSendHookTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 057C399728ABEF3A00D201F0 /* MsgSendHookTests.m */; };
+		057C39A228ABEF3A00D201F0 /* MsgSendHookUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 057C39A128ABEF3A00D201F0 /* MsgSendHookUITests.m */; };
+		057C39A428ABEF3A00D201F0 /* MsgSendHookUITestsLaunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 057C39A328ABEF3A00D201F0 /* MsgSendHookUITestsLaunchTests.m */; };
+		057C39B228ABEF6600D201F0 /* ASMHook.c in Sources */ = {isa = PBXBuildFile; fileRef = 057C39B128ABEF6600D201F0 /* ASMHook.c */; };
+		057C39B528ABF00200D201F0 /* fishhook.c in Sources */ = {isa = PBXBuildFile; fileRef = 057C39B428ABF00200D201F0 /* fishhook.c */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		057C399428ABEF3900D201F0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 057C397028ABEF3600D201F0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 057C397728ABEF3600D201F0;
+			remoteInfo = MsgSendHook;
+		};
+		057C399E28ABEF3A00D201F0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 057C397028ABEF3600D201F0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 057C397728ABEF3600D201F0;
+			remoteInfo = MsgSendHook;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		057C397828ABEF3600D201F0 /* MsgSendHook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MsgSendHook.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		057C397B28ABEF3600D201F0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		057C397C28ABEF3600D201F0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		057C397E28ABEF3600D201F0 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		057C397F28ABEF3600D201F0 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		057C398128ABEF3600D201F0 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		057C398228ABEF3600D201F0 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		057C398528ABEF3600D201F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		057C398728ABEF3900D201F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		057C398A28ABEF3900D201F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		057C398C28ABEF3900D201F0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		057C398D28ABEF3900D201F0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		057C399328ABEF3900D201F0 /* MsgSendHookTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MsgSendHookTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		057C399728ABEF3A00D201F0 /* MsgSendHookTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MsgSendHookTests.m; sourceTree = "<group>"; };
+		057C399D28ABEF3A00D201F0 /* MsgSendHookUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MsgSendHookUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		057C39A128ABEF3A00D201F0 /* MsgSendHookUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MsgSendHookUITests.m; sourceTree = "<group>"; };
+		057C39A328ABEF3A00D201F0 /* MsgSendHookUITestsLaunchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MsgSendHookUITestsLaunchTests.m; sourceTree = "<group>"; };
+		057C39B028ABEF6600D201F0 /* ASMHook.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ASMHook.h; sourceTree = "<group>"; };
+		057C39B128ABEF6600D201F0 /* ASMHook.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ASMHook.c; sourceTree = "<group>"; };
+		057C39B328ABF00200D201F0 /* fishhook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fishhook.h; sourceTree = "<group>"; };
+		057C39B428ABF00200D201F0 /* fishhook.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = fishhook.c; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		057C397528ABEF3600D201F0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		057C399028ABEF3900D201F0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		057C399A28ABEF3A00D201F0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		057C396F28ABEF3600D201F0 = {
+			isa = PBXGroup;
+			children = (
+				057C397A28ABEF3600D201F0 /* MsgSendHook */,
+				057C399628ABEF3900D201F0 /* MsgSendHookTests */,
+				057C39A028ABEF3A00D201F0 /* MsgSendHookUITests */,
+				057C397928ABEF3600D201F0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		057C397928ABEF3600D201F0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				057C397828ABEF3600D201F0 /* MsgSendHook.app */,
+				057C399328ABEF3900D201F0 /* MsgSendHookTests.xctest */,
+				057C399D28ABEF3A00D201F0 /* MsgSendHookUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		057C397A28ABEF3600D201F0 /* MsgSendHook */ = {
+			isa = PBXGroup;
+			children = (
+				057C39B328ABF00200D201F0 /* fishhook.h */,
+				057C39B428ABF00200D201F0 /* fishhook.c */,
+				057C397B28ABEF3600D201F0 /* AppDelegate.h */,
+				057C397C28ABEF3600D201F0 /* AppDelegate.m */,
+				057C397E28ABEF3600D201F0 /* SceneDelegate.h */,
+				057C397F28ABEF3600D201F0 /* SceneDelegate.m */,
+				057C398128ABEF3600D201F0 /* ViewController.h */,
+				057C398228ABEF3600D201F0 /* ViewController.m */,
+				057C39B028ABEF6600D201F0 /* ASMHook.h */,
+				057C39B128ABEF6600D201F0 /* ASMHook.c */,
+				057C398428ABEF3600D201F0 /* Main.storyboard */,
+				057C398728ABEF3900D201F0 /* Assets.xcassets */,
+				057C398928ABEF3900D201F0 /* LaunchScreen.storyboard */,
+				057C398C28ABEF3900D201F0 /* Info.plist */,
+				057C398D28ABEF3900D201F0 /* main.m */,
+			);
+			path = MsgSendHook;
+			sourceTree = "<group>";
+		};
+		057C399628ABEF3900D201F0 /* MsgSendHookTests */ = {
+			isa = PBXGroup;
+			children = (
+				057C399728ABEF3A00D201F0 /* MsgSendHookTests.m */,
+			);
+			path = MsgSendHookTests;
+			sourceTree = "<group>";
+		};
+		057C39A028ABEF3A00D201F0 /* MsgSendHookUITests */ = {
+			isa = PBXGroup;
+			children = (
+				057C39A128ABEF3A00D201F0 /* MsgSendHookUITests.m */,
+				057C39A328ABEF3A00D201F0 /* MsgSendHookUITestsLaunchTests.m */,
+			);
+			path = MsgSendHookUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		057C397728ABEF3600D201F0 /* MsgSendHook */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 057C39A728ABEF3A00D201F0 /* Build configuration list for PBXNativeTarget "MsgSendHook" */;
+			buildPhases = (
+				057C397428ABEF3600D201F0 /* Sources */,
+				057C397528ABEF3600D201F0 /* Frameworks */,
+				057C397628ABEF3600D201F0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MsgSendHook;
+			productName = MsgSendHook;
+			productReference = 057C397828ABEF3600D201F0 /* MsgSendHook.app */;
+			productType = "com.apple.product-type.application";
+		};
+		057C399228ABEF3900D201F0 /* MsgSendHookTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 057C39AA28ABEF3A00D201F0 /* Build configuration list for PBXNativeTarget "MsgSendHookTests" */;
+			buildPhases = (
+				057C398F28ABEF3900D201F0 /* Sources */,
+				057C399028ABEF3900D201F0 /* Frameworks */,
+				057C399128ABEF3900D201F0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				057C399528ABEF3900D201F0 /* PBXTargetDependency */,
+			);
+			name = MsgSendHookTests;
+			productName = MsgSendHookTests;
+			productReference = 057C399328ABEF3900D201F0 /* MsgSendHookTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		057C399C28ABEF3A00D201F0 /* MsgSendHookUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 057C39AD28ABEF3A00D201F0 /* Build configuration list for PBXNativeTarget "MsgSendHookUITests" */;
+			buildPhases = (
+				057C399928ABEF3A00D201F0 /* Sources */,
+				057C399A28ABEF3A00D201F0 /* Frameworks */,
+				057C399B28ABEF3A00D201F0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				057C399F28ABEF3A00D201F0 /* PBXTargetDependency */,
+			);
+			name = MsgSendHookUITests;
+			productName = MsgSendHookUITests;
+			productReference = 057C399D28ABEF3A00D201F0 /* MsgSendHookUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		057C397028ABEF3600D201F0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1300;
+				TargetAttributes = {
+					057C397728ABEF3600D201F0 = {
+						CreatedOnToolsVersion = 13.0;
+					};
+					057C399228ABEF3900D201F0 = {
+						CreatedOnToolsVersion = 13.0;
+						TestTargetID = 057C397728ABEF3600D201F0;
+					};
+					057C399C28ABEF3A00D201F0 = {
+						CreatedOnToolsVersion = 13.0;
+						TestTargetID = 057C397728ABEF3600D201F0;
+					};
+				};
+			};
+			buildConfigurationList = 057C397328ABEF3600D201F0 /* Build configuration list for PBXProject "MsgSendHook" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 057C396F28ABEF3600D201F0;
+			productRefGroup = 057C397928ABEF3600D201F0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				057C397728ABEF3600D201F0 /* MsgSendHook */,
+				057C399228ABEF3900D201F0 /* MsgSendHookTests */,
+				057C399C28ABEF3A00D201F0 /* MsgSendHookUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		057C397628ABEF3600D201F0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				057C398B28ABEF3900D201F0 /* LaunchScreen.storyboard in Resources */,
+				057C398828ABEF3900D201F0 /* Assets.xcassets in Resources */,
+				057C398628ABEF3600D201F0 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		057C399128ABEF3900D201F0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		057C399B28ABEF3A00D201F0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		057C397428ABEF3600D201F0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				057C398328ABEF3600D201F0 /* ViewController.m in Sources */,
+				057C39B228ABEF6600D201F0 /* ASMHook.c in Sources */,
+				057C397D28ABEF3600D201F0 /* AppDelegate.m in Sources */,
+				057C398E28ABEF3900D201F0 /* main.m in Sources */,
+				057C39B528ABF00200D201F0 /* fishhook.c in Sources */,
+				057C398028ABEF3600D201F0 /* SceneDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		057C398F28ABEF3900D201F0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				057C399828ABEF3A00D201F0 /* MsgSendHookTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		057C399928ABEF3A00D201F0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				057C39A228ABEF3A00D201F0 /* MsgSendHookUITests.m in Sources */,
+				057C39A428ABEF3A00D201F0 /* MsgSendHookUITestsLaunchTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		057C399528ABEF3900D201F0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 057C397728ABEF3600D201F0 /* MsgSendHook */;
+			targetProxy = 057C399428ABEF3900D201F0 /* PBXContainerItemProxy */;
+		};
+		057C399F28ABEF3A00D201F0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 057C397728ABEF3600D201F0 /* MsgSendHook */;
+			targetProxy = 057C399E28ABEF3A00D201F0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		057C398428ABEF3600D201F0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				057C398528ABEF3600D201F0 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		057C398928ABEF3900D201F0 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				057C398A28ABEF3900D201F0 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		057C39A528ABEF3A00D201F0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		057C39A628ABEF3A00D201F0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		057C39A828ABEF3A00D201F0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = NB7WMC2L2D;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MsgSendHook/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hibo.MsgSendHook;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		057C39A928ABEF3A00D201F0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = NB7WMC2L2D;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MsgSendHook/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hibo.MsgSendHook;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		057C39AB28ABEF3A00D201F0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hibo.MsgSendHookTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MsgSendHook.app/MsgSendHook";
+			};
+			name = Debug;
+		};
+		057C39AC28ABEF3A00D201F0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hibo.MsgSendHookTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MsgSendHook.app/MsgSendHook";
+			};
+			name = Release;
+		};
+		057C39AE28ABEF3A00D201F0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hibo.MsgSendHookUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MsgSendHook;
+			};
+			name = Debug;
+		};
+		057C39AF28ABEF3A00D201F0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hibo.MsgSendHookUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MsgSendHook;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		057C397328ABEF3600D201F0 /* Build configuration list for PBXProject "MsgSendHook" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				057C39A528ABEF3A00D201F0 /* Debug */,
+				057C39A628ABEF3A00D201F0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		057C39A728ABEF3A00D201F0 /* Build configuration list for PBXNativeTarget "MsgSendHook" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				057C39A828ABEF3A00D201F0 /* Debug */,
+				057C39A928ABEF3A00D201F0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		057C39AA28ABEF3A00D201F0 /* Build configuration list for PBXNativeTarget "MsgSendHookTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				057C39AB28ABEF3A00D201F0 /* Debug */,
+				057C39AC28ABEF3A00D201F0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		057C39AD28ABEF3A00D201F0 /* Build configuration list for PBXNativeTarget "MsgSendHookUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				057C39AE28ABEF3A00D201F0 /* Debug */,
+				057C39AF28ABEF3A00D201F0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 057C397028ABEF3600D201F0 /* Project object */;
+}

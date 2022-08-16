@@ -1,0 +1,395 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0C93F8C0263FA58200B3DC49 /* Insert.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C93F8BE263FA58200B3DC49 /* Insert.h */; };
+		0C93F8C1263FA58200B3DC49 /* Insert.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C93F8BF263FA58200B3DC49 /* Insert.m */; };
+		0CB7A7FB262C3886008E53DB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CB7A7FA262C3886008E53DB /* UIKit.framework */; };
+		0CB7A7FD262C3886008E53DB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CB7A7FC262C3886008E53DB /* Foundation.framework */; };
+		0CB7A7FF262C3886008E53DB /* CydiaSubstrate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CB7A7FE262C3886008E53DB /* CydiaSubstrate.framework */; };
+		0CB7A808262C3886008E53DB /* WCDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0CB7A807262C3886008E53DB /* WCDemo.mm */; };
+		0CB7A815262C38A4008E53DB /* fishhook.h in Headers */ = {isa = PBXBuildFile; fileRef = 0CB7A813262C38A4008E53DB /* fishhook.h */; };
+		0CB7A816262C38A4008E53DB /* fishhook.c in Sources */ = {isa = PBXBuildFile; fileRef = 0CB7A814262C38A4008E53DB /* fishhook.c */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0C93F8BE263FA58200B3DC49 /* Insert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Insert.h; sourceTree = "<group>"; };
+		0C93F8BF263FA58200B3DC49 /* Insert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Insert.m; sourceTree = "<group>"; };
+		0CB7A7F7262C3886008E53DB /* WCDemo.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = WCDemo.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		0CB7A7FA262C3886008E53DB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		0CB7A7FC262C3886008E53DB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		0CB7A7FE262C3886008E53DB /* CydiaSubstrate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CydiaSubstrate.framework; path = Library/Frameworks/CydiaSubstrate.framework; sourceTree = DEVELOPER_DIR; };
+		0CB7A803262C3886008E53DB /* control */ = {isa = PBXFileReference; lastKnownFileType = text; path = control; sourceTree = "<group>"; };
+		0CB7A805262C3886008E53DB /* WCDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "WCDemo-Prefix.pch"; path = "../WCDemo-Prefix.pch"; sourceTree = "<group>"; };
+		0CB7A806262C3886008E53DB /* WCDemo.xm */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc.preprocessed; path = WCDemo.xm; sourceTree = "<group>"; };
+		0CB7A807262C3886008E53DB /* WCDemo.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = WCDemo.mm; sourceTree = "<group>"; };
+		0CB7A80C262C3886008E53DB /* WCDemo.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = WCDemo.plist; sourceTree = "<group>"; };
+		0CB7A813262C38A4008E53DB /* fishhook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fishhook.h; sourceTree = "<group>"; };
+		0CB7A814262C38A4008E53DB /* fishhook.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = fishhook.c; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0CB7A7F3262C3886008E53DB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0CB7A7FB262C3886008E53DB /* UIKit.framework in Frameworks */,
+				0CB7A7FD262C3886008E53DB /* Foundation.framework in Frameworks */,
+				0CB7A7FF262C3886008E53DB /* CydiaSubstrate.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0CB7A7EC262C3886008E53DB = {
+			isa = PBXGroup;
+			children = (
+				0CB7A800262C3886008E53DB /* WCDemo */,
+				0CB7A7F9262C3886008E53DB /* Frameworks */,
+				0CB7A7F8262C3886008E53DB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0CB7A7F8262C3886008E53DB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0CB7A7F7262C3886008E53DB /* WCDemo.dylib */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0CB7A7F9262C3886008E53DB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0CB7A7FA262C3886008E53DB /* UIKit.framework */,
+				0CB7A7FC262C3886008E53DB /* Foundation.framework */,
+				0CB7A7FE262C3886008E53DB /* CydiaSubstrate.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0CB7A800262C3886008E53DB /* WCDemo */ = {
+			isa = PBXGroup;
+			children = (
+				0C93F8BE263FA58200B3DC49 /* Insert.h */,
+				0C93F8BF263FA58200B3DC49 /* Insert.m */,
+				0CB7A814262C38A4008E53DB /* fishhook.c */,
+				0CB7A813262C38A4008E53DB /* fishhook.h */,
+				0CB7A806262C3886008E53DB /* WCDemo.xm */,
+				0CB7A807262C3886008E53DB /* WCDemo.mm */,
+				0CB7A801262C3886008E53DB /* Package */,
+				0CB7A804262C3886008E53DB /* Supporting Files */,
+			);
+			path = WCDemo;
+			sourceTree = "<group>";
+		};
+		0CB7A801262C3886008E53DB /* Package */ = {
+			isa = PBXGroup;
+			children = (
+				0CB7A802262C3886008E53DB /* DEBIAN */,
+				0CB7A809262C3886008E53DB /* Library */,
+			);
+			path = Package;
+			sourceTree = "<group>";
+		};
+		0CB7A802262C3886008E53DB /* DEBIAN */ = {
+			isa = PBXGroup;
+			children = (
+				0CB7A803262C3886008E53DB /* control */,
+			);
+			path = DEBIAN;
+			sourceTree = "<group>";
+		};
+		0CB7A804262C3886008E53DB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0CB7A805262C3886008E53DB /* WCDemo-Prefix.pch */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0CB7A809262C3886008E53DB /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				0CB7A80A262C3886008E53DB /* MobileSubstrate */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		0CB7A80A262C3886008E53DB /* MobileSubstrate */ = {
+			isa = PBXGroup;
+			children = (
+				0CB7A80B262C3886008E53DB /* DynamicLibraries */,
+			);
+			path = MobileSubstrate;
+			sourceTree = "<group>";
+		};
+		0CB7A80B262C3886008E53DB /* DynamicLibraries */ = {
+			isa = PBXGroup;
+			children = (
+				0CB7A80C262C3886008E53DB /* WCDemo.plist */,
+			);
+			path = DynamicLibraries;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		0CB7A7F4262C3886008E53DB /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0CB7A815262C38A4008E53DB /* fishhook.h in Headers */,
+				0C93F8C0263FA58200B3DC49 /* Insert.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		0CB7A7F6262C3886008E53DB /* WCDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0CB7A80F262C3886008E53DB /* Build configuration list for PBXNativeTarget "WCDemo" */;
+			buildPhases = (
+				0CB7A7F1262C3886008E53DB /* ShellScript */,
+				0CB7A7F2262C3886008E53DB /* Sources */,
+				0CB7A7F3262C3886008E53DB /* Frameworks */,
+				0CB7A7F4262C3886008E53DB /* Headers */,
+				0CB7A7F5262C3886008E53DB /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WCDemo;
+			productName = WCDemo;
+			productReference = 0CB7A7F7262C3886008E53DB /* WCDemo.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0CB7A7ED262C3886008E53DB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					0CB7A7F6262C3886008E53DB = {
+						CreatedOnToolsVersion = 12.4;
+					};
+				};
+			};
+			buildConfigurationList = 0CB7A7F0262C3886008E53DB /* Build configuration list for PBXProject "WCDemo" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0CB7A7EC262C3886008E53DB;
+			productRefGroup = 0CB7A7F8262C3886008E53DB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0CB7A7F6262C3886008E53DB /* WCDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0CB7A7F1262C3886008E53DB /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/opt/MonkeyDev/bin/md --xcbp-logos";
+		};
+		0CB7A7F5262C3886008E53DB /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/opt/MonkeyDev/bin/md --xcbp";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0CB7A7F2262C3886008E53DB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C93F8C1263FA58200B3DC49 /* Insert.m in Sources */,
+				0CB7A816262C38A4008E53DB /* fishhook.c in Sources */,
+				0CB7A808262C3886008E53DB /* WCDemo.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		0CB7A80D262C3886008E53DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				DEVELOPMENT_TEAM = NB7WMC2L2D;
+				EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "*.nib *.lproj *.gch (*) .DS_Store CVS .svn .git .hg *.xcodeproj *.xcode *.pbproj *.pbxproj";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(MonkeyDevPath)/frameworks/**",
+					"$(MonkeyDevTheosPath)/vendor/lib",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(MonkeyDevTheosPath)/vendor/include/**";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LIBRARY_SEARCH_PATHS = "$(MonkeyDevTheosPath)/vendor/lib/**";
+				MonkeyDevPath = /opt/MonkeyDev;
+				MonkeyDevTheosPath = /opt/theos;
+				OTHER_CFLAGS = "-DTHEOS_INSTANCE_NAME=\"\\\"WCDemo\\\"\"";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0CB7A80E262C3886008E53DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEVELOPMENT_TEAM = NB7WMC2L2D;
+				EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "*.nib *.lproj *.gch (*) .DS_Store CVS .svn .git .hg *.xcodeproj *.xcode *.pbproj *.pbxproj";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(MonkeyDevPath)/frameworks/**",
+					"$(MonkeyDevTheosPath)/vendor/lib",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(MonkeyDevTheosPath)/vendor/include/**";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LIBRARY_SEARCH_PATHS = "$(MonkeyDevTheosPath)/vendor/lib/**";
+				MonkeyDevPath = /opt/MonkeyDev;
+				MonkeyDevTheosPath = /opt/theos;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = "-DTHEOS_INSTANCE_NAME=\"\\\"WCDemo\\\"\"";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = NO;
+			};
+			name = Debug;
+		};
+		0CB7A810262C3886008E53DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NB7WMC2L2D;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WCDemo/WCDemo-Prefix.pch";
+				INSTALL_PATH = /Library/MobileSubstrate/DynamicLibraries;
+				MonkeyDevBuildPackageOnAnyBuild = NO;
+				MonkeyDevClearUiCacheOnInstall = NO;
+				MonkeyDevCopyOnBuild = NO;
+				MonkeyDevDeviceIP = localhost;
+				MonkeyDevDevicePassword = "";
+				MonkeyDevDevicePort = 2222;
+				MonkeyDevInstallOnAnyBuild = YES;
+				MonkeyDevInstallOnProfiling = YES;
+				MonkeyDevkillProcessOnInstall = WeChat;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		0CB7A811262C3886008E53DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NB7WMC2L2D;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WCDemo/WCDemo-Prefix.pch";
+				INSTALL_PATH = /Library/MobileSubstrate/DynamicLibraries;
+				MonkeyDevBuildPackageOnAnyBuild = NO;
+				MonkeyDevClearUiCacheOnInstall = NO;
+				MonkeyDevCopyOnBuild = NO;
+				MonkeyDevDeviceIP = localhost;
+				MonkeyDevDevicePassword = "";
+				MonkeyDevDevicePort = 2222;
+				MonkeyDevInstallOnAnyBuild = YES;
+				MonkeyDevInstallOnProfiling = YES;
+				MonkeyDevkillProcessOnInstall = WeChat;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0CB7A7F0262C3886008E53DB /* Build configuration list for PBXProject "WCDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0CB7A80D262C3886008E53DB /* Release */,
+				0CB7A80E262C3886008E53DB /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0CB7A80F262C3886008E53DB /* Build configuration list for PBXNativeTarget "WCDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0CB7A810262C3886008E53DB /* Release */,
+				0CB7A811262C3886008E53DB /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0CB7A7ED262C3886008E53DB /* Project object */;
+}
