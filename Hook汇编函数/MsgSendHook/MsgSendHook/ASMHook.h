@@ -9,7 +9,8 @@
 #define ASMHook_h
 
 #include <stdio.h>
+#include "fishhook.h"
 
-extern void hookStart(void);
+extern void hookStart(void *func);
 
 #endif /* ASMHook_h */
