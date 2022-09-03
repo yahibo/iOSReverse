@@ -10,32 +10,33 @@
 #include <pthread/pthread.h>
 #include <dispatch/dispatch.h>
 #include <stdarg.h>
+#include "fishhook.h"
 
-/// 定义线程私有数据key
+#pragma mark - 定义线程私有数据key
 static pthread_key_t pthread_key;
 
-/// 定义线程私有数据结构体
+#pragma mark - 定义线程私有数据结构体
 struct private_data {
     uintptr_t lr_list[10000];
     int lr_index;
 } private_data;
 
-/// 是否和线程关联的数据
+#pragma mark - 是否和线程关联的数据
 static void release_pthread_key_data(void *ptr) {
     struct private_data *data = (struct private_data *)ptr;
     if (data) free(data);
 }
 
-/// 1、汇编调用c函数
-#define asm_call_c(b, funcP)\
+#pragma mark - 1、汇编调用c函数
+#define asm_call_c(funcP)\
 __asm volatile("stp x8, x9, [sp, #-16]! \n");\
 __asm volatile("mov x12, %x0 \n"\
                  :\
                  : "r"(funcP));\
 __asm volatile("ldp x8, x9, [sp], #16 \n");\
-__asm volatile(#b " x12 \n");\
+__asm volatile("blr x12 \n");\
 
-/// 2、hook前，保存寄存器值
+#pragma mark - 2、hook前，保存寄存器值
 #define save_context()\
 __asm volatile( \
 "stp x8, x9, [sp, #-16]!\n" \
@@ -48,7 +49,7 @@ __asm volatile( \
 "stp q2, q3, [sp, #-32]!\n" \
 "stp q0, q1, [sp, #-32]!\n" );
 
-/// 3、hook后，恢复寄存器值
+#pragma mark - 3、hook后，恢复寄存器值
 #define resume_context()\
 __asm volatile( \
 "ldp q0, q1, [sp], #32\n" \
@@ -61,21 +62,23 @@ __asm volatile( \
 "ldp x6, x7, [sp], #16\n" \
 "ldp x8, x9, [sp], #16\n" );
 
-void (*my_func)(id param);
+#pragma mark - 用来对外传递参数
+void (*my_func)(const char *clsName, const char *selector);
 
 #pragma mark - 保存子程序返回地址（TSD解决线程安全问题）
 static void save_lr(id self, SEL _cmd, id param1, id param2, uintptr_t lr) {
-    const char * selector = sel_getName(_cmd);
     const char *clsName = class_getName(object_getClass(self));
-    //printf("class : %s, methodname : %s",className,selector);
+    const char * selector = sel_getName(_cmd);
     if (strcmp( selector, "isEqualToString:" ) == 0) {
         printf("===>class:%s methodname:%s param1:%p\n", clsName, selector, param1);
     } else {
         printf("===>class:%s methodname:%s\n", clsName, selector);
     }
     if (strcmp( selector, "setName:" ) == 0) {
-        my_func(param1);
+        my_func(clsName, selector);
         printf("===>class:%s methodname:%s param1:%p\n", clsName, selector, param1);
+    } else {
+        my_func(clsName, selector);
     }
     struct private_data *data = (struct private_data *)pthread_getspecific(pthread_key);
     if (data == NULL) {
@@ -104,17 +107,17 @@ static void hook_objc_msgSend() {
     save_context();
     //2、设置参数，并记录lr寄存器值，保存子函数返回的地址
     __asm volatile("mov x4, lr \n");
-    asm_call_c(blr, &save_lr);
+    asm_call_c(&save_lr);
     //3、恢复上下文
     resume_context();
     
     //4、调用原始汇编函数
-    asm_call_c(blr, orig_objc_msgSend);
+    asm_call_c(orig_objc_msgSend);
     
     //5、记录上下文
     save_context();
     //6、恢复lr寄存器值，找到返回的地址，并重新设置lr寄存器（函数返回值存放在x0寄存器）
-    asm_call_c(blr, &resume_lr);
+    asm_call_c(&resume_lr);
     __asm volatile("mov lr, x0 \n");
     //7、恢复上下文
     resume_context();
@@ -134,4 +137,10 @@ void hookStart(void *func) {
         struct rebinding rebs[] = {reb};
         rebind_symbols(rebs, sizeof(rebs)/sizeof(reb));
     });
+}
+
+
+void test_hook_objc_msgSend(id self, SEL sel) {
+//    printf("hook success");
+    orig_objc_msgSend(self, sel);
 }

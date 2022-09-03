@@ -16,19 +16,17 @@
 
 @implementation ViewController
 
-static void view_func(id param) {
-    NSString *_param = [NSString stringWithFormat:@"%@", param];
-    NSLog(@"===hibo== param:%@", _param);
+#pragma mark - 获取hook到的参数
+static void view_func(const char *clsName, const char *selector) {
+    printf("===hibo== clsName:%s sel:%s\n", clsName, selector);
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
     hookStart(&view_func);
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    [self myFunc];
     [self setName:[ViewController new]];
 }
 
