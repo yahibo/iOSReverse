@@ -8,12 +8,13 @@
 #ifndef WXHeader_h
 #define WXHeader_h
 
-#import <UIKit/UIKit.h>
-#import "HBSettingPageController.h"
+#import "HBCommon.h"
 
 /// 相关界面
 @interface MMTableViewInfo
+
 - (long long)numberOfSectionsInTableView:(id)arg1;
+
 @end
 
 
@@ -21,29 +22,38 @@
     id m_delegate;
     NSDictionary *m_dicBaseInfo;
 }
+
 @end
 
 
 @interface WCPayInfoItem :NSObject
-@property(retain, nonatomic) NSString *m_c2cNativeUrl;
+
+@property (retain, nonatomic) NSString *m_c2cNativeUrl;
+
 @end
 
 
 @interface CMessageWrap :NSObject
-@property(retain, nonatomic) WCPayInfoItem *m_oWCPayInfoItem;
-@property(retain, nonatomic) NSString *m_nsFromUsr;
+
+@property (retain, nonatomic) WCPayInfoItem *m_oWCPayInfoItem;
+@property (retain, nonatomic) NSString *m_nsFromUsr;
+@property (retain, nonatomic) NSString *m_nsPushTitle;
+
 @end
 
 
 @interface WCRedEnvelopesControlData :NSObject
-@property(retain, nonatomic) CMessageWrap *m_oSelectedMessageWrap;
-@property(retain, nonatomic) NSDictionary *m_structDicRedEnvelopesBaseInfo;
+
+@property (retain, nonatomic) CMessageWrap *m_oSelectedMessageWrap;
+@property (retain, nonatomic) NSDictionary *m_structDicRedEnvelopesBaseInfo;
+
 @end
 
 
 @interface WCRedEnvelopesControlLogic {
     WCRedEnvelopesControlData *m_data;
 }
+
 @end
 
 
@@ -53,76 +63,107 @@
 
 
 @interface WCBizUtil: NSObject
+
 + (id)dictionaryWithDecodedComponets:(id)arg1 separator:(id)arg2;
+
 @end
 
 
 @interface MMServiceCenter
-+(id)defaultCenter;
--(id)getService:(Class)arg1;
+
++ (id)defaultCenter;
+- (id)getService:(Class)arg1;
+
 @end
 
 
 @interface MMMsgLogicManager
--(id)GetCurrentLogicController;
+
+- (id)GetCurrentLogicController;
+
 @end
 
 
 @interface WeixinContentLogicController
--(id)m_contact;
+
+- (id)m_contact;
+
 @end
 
 
 @interface CContactMgr
--(id)getSelfContact;
+
+- (id)getSelfContact;
+
 @end
 
 
 @interface CBaseContact
-@property(retain, nonatomic) NSString *m_nsHeadImgUrl;
-@property(retain, nonatomic) NSString *m_nsUsrName;
+
+@property (retain, nonatomic) NSString *m_nsHeadImgUrl;
+@property (retain, nonatomic) NSString *m_nsUsrName;
+
 @end
 
 
 @interface CContact :CBaseContact
--(id)getContactDisplayName;
+
+- (id)getContactDisplayName;
+
 @end
 
 
 @interface WCPayLogicMgr
+
 - (void)setRealnameReportScene:(unsigned int)arg1;
-- (void)checkHongbaoOpenLicense:(id)arg1 acceptCallback:(void(^)())arg2 denyCallback:(void(^)())arg3;
+- (void)checkHongbaoOpenLicense:(id)arg1 acceptCallback:(void(^)(void))arg2 denyCallback:(void(^)(void))arg3;
+
 @end
 
 
 @interface BaseResponse
-@property(nonatomic) int ret; // @dynamic ret;
+
+@property (nonatomic) int ret;
+
 @end
 
 
 @interface SKBuiltinBuffer_t
-@property(retain, nonatomic) NSData *buffer; // @dynamic buffer;
-@property(nonatomic) unsigned int iLen; // @dynamic iLen;
+
+@property (retain, nonatomic) NSData *buffer;
+@property (nonatomic) unsigned int iLen;
+
 @end
 
 
 @interface HongBaoRes
-@property(retain, nonatomic) BaseResponse *baseResponse; // @d
-@property(retain, nonatomic) SKBuiltinBuffer_t *retText; // @dynamic retText;
-@property(nonatomic) int cgiCmdid; // @dynamic cgiCmdid;
-@property(retain, nonatomic) NSString *errorMsg; // @dynamic errorMsg;
-@property(nonatomic) int errorType; // @dynamic errorType;
-@property(retain, nonatomic) NSString *platMsg; // @dynamic platMsg;
-@property(nonatomic) int platRet;
+
+@property (retain, nonatomic) BaseResponse *baseResponse; // @d
+@property (retain, nonatomic) SKBuiltinBuffer_t *retText; // @dynamic retText;
+@property (nonatomic) int cgiCmdid; // @dynamic cgiCmdid;
+@property (retain, nonatomic) NSString *errorMsg; // @dynamic errorMsg;
+@property (nonatomic) int errorType; // @dynamic errorType;
+@property (retain, nonatomic) NSString *platMsg; // @dynamic platMsg;
+@property (nonatomic) int platRet;
+
 @end
+
 
 @interface WCRedEnvelopesLogicMgr
--(void)OpenRedEnvelopesRequest:(id)dic;
+
+- (void)OpenRedEnvelopesRequest:(id)dic;
 - (void)ReceiverQueryRedEnvelopesRequest:(id)arg1;
 - (void)OnWCToHongbaoCommonResponse:(HongBaoRes *)arg1 Request:(id)arg2;
+
 @end
 
+
 @interface MoreViewController : UIViewController
+
+@end
+
+
+@interface BaseMsgContentViewController : UIViewController
 
 @end
 

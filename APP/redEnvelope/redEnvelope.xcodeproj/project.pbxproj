@@ -40,10 +40,10 @@
 		05295BAF277E07C800544E03 /* WXHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = 05295BAE277E07C800544E03 /* WXHeader.h */; };
 		05295BB2277E082000544E03 /* WXRedParamQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = 05295BB0277E082000544E03 /* WXRedParamQueue.h */; };
 		05295BB3277E082000544E03 /* WXRedParamQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 05295BB1277E082000544E03 /* WXRedParamQueue.m */; };
-		05295BB6277E087F00544E03 /* HBTestPage.h in Headers */ = {isa = PBXBuildFile; fileRef = 05295BB4277E087F00544E03 /* HBTestPage.h */; };
-		05295BB7277E087F00544E03 /* HBTestPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 05295BB5277E087F00544E03 /* HBTestPage.m */; };
-		05295BBA277E08AE00544E03 /* HBSettingPageController.h in Headers */ = {isa = PBXBuildFile; fileRef = 05295BB8277E08AE00544E03 /* HBSettingPageController.h */; };
-		05295BBB277E08AE00544E03 /* HBSettingPageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05295BB9277E08AE00544E03 /* HBSettingPageController.m */; };
+		05295BB6277E087F00544E03 /* HBFloatView.h in Headers */ = {isa = PBXBuildFile; fileRef = 05295BB4277E087F00544E03 /* HBFloatView.h */; };
+		05295BB7277E087F00544E03 /* HBFloatView.m in Sources */ = {isa = PBXBuildFile; fileRef = 05295BB5277E087F00544E03 /* HBFloatView.m */; };
+		05295BBA277E08AE00544E03 /* HBSettingsController.h in Headers */ = {isa = PBXBuildFile; fileRef = 05295BB8277E08AE00544E03 /* HBSettingsController.h */; };
+		05295BBB277E08AE00544E03 /* HBSettingsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05295BB9277E08AE00544E03 /* HBSettingsController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,10 +111,11 @@
 		05295BAE277E07C800544E03 /* WXHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXHeader.h; sourceTree = "<group>"; };
 		05295BB0277E082000544E03 /* WXRedParamQueue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WXRedParamQueue.h; sourceTree = "<group>"; };
 		05295BB1277E082000544E03 /* WXRedParamQueue.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WXRedParamQueue.m; sourceTree = "<group>"; };
-		05295BB4277E087F00544E03 /* HBTestPage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HBTestPage.h; sourceTree = "<group>"; };
-		05295BB5277E087F00544E03 /* HBTestPage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HBTestPage.m; sourceTree = "<group>"; };
-		05295BB8277E08AE00544E03 /* HBSettingPageController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HBSettingPageController.h; sourceTree = "<group>"; };
-		05295BB9277E08AE00544E03 /* HBSettingPageController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HBSettingPageController.m; sourceTree = "<group>"; };
+		05295BB4277E087F00544E03 /* HBFloatView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HBFloatView.h; sourceTree = "<group>"; };
+		05295BB5277E087F00544E03 /* HBFloatView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HBFloatView.m; sourceTree = "<group>"; };
+		05295BB8277E08AE00544E03 /* HBSettingsController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HBSettingsController.h; sourceTree = "<group>"; };
+		05295BB9277E08AE00544E03 /* HBSettingsController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HBSettingsController.m; sourceTree = "<group>"; };
+		052EADD8294DDBDB00DC614C /* HBCommon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HBCommon.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -222,15 +223,16 @@
 		05295B68277E076800544E03 /* Logos */ = {
 			isa = PBXGroup;
 			children = (
+				052EADD8294DDBDB00DC614C /* HBCommon.h */,
 				05295BAE277E07C800544E03 /* WXHeader.h */,
 				05295B69277E076800544E03 /* redEnvelopeDylib.xm */,
 				05295B6A277E076800544E03 /* redEnvelopeDylib.mm */,
 				05295BB0277E082000544E03 /* WXRedParamQueue.h */,
 				05295BB1277E082000544E03 /* WXRedParamQueue.m */,
-				05295BB4277E087F00544E03 /* HBTestPage.h */,
-				05295BB5277E087F00544E03 /* HBTestPage.m */,
-				05295BB8277E08AE00544E03 /* HBSettingPageController.h */,
-				05295BB9277E08AE00544E03 /* HBSettingPageController.m */,
+				05295BB4277E087F00544E03 /* HBFloatView.h */,
+				05295BB5277E087F00544E03 /* HBFloatView.m */,
+				05295BB8277E08AE00544E03 /* HBSettingsController.h */,
+				05295BB9277E08AE00544E03 /* HBSettingsController.m */,
 			);
 			path = Logos;
 			sourceTree = "<group>";
@@ -312,13 +314,13 @@
 				05295B76277E076800544E03 /* MDMethodTrace.h in Headers */,
 				05295B9F277E076800544E03 /* fishhook.h in Headers */,
 				05295B93277E076800544E03 /* LLDBTools.h in Headers */,
-				05295BBA277E08AE00544E03 /* HBSettingPageController.h in Headers */,
+				05295BBA277E08AE00544E03 /* HBSettingsController.h in Headers */,
 				05295B6E277E076800544E03 /* MDConfigManager.h in Headers */,
 				05295BA1277E076800544E03 /* redEnvelopeDylib.h in Headers */,
 				05295B8D277E076800544E03 /* OCSelectorTrampolines.h in Headers */,
 				05295BAF277E07C800544E03 /* WXHeader.h in Headers */,
 				05295B89277E076800544E03 /* OCMethodTrace.h in Headers */,
-				05295BB6277E087F00544E03 /* HBTestPage.h in Headers */,
+				05295BB6277E087F00544E03 /* HBFloatView.h in Headers */,
 				05295BB2277E082000544E03 /* WXRedParamQueue.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -488,14 +490,14 @@
 				05295B9D277E076800544E03 /* fishhook.c in Sources */,
 				05295B9A277E076800544E03 /* AntiAntiDebug.m in Sources */,
 				05295B8F277E076800544E03 /* OCSelectorTrampolines.mm in Sources */,
-				05295BB7277E087F00544E03 /* HBTestPage.m in Sources */,
+				05295BB7277E087F00544E03 /* HBFloatView.m in Sources */,
 				05295B7F277E076800544E03 /* a1a2-selectortramps-i386.s in Sources */,
 				05295B85277E076800544E03 /* a2a3-selectortramps-i386.s in Sources */,
 				05295B83277E076800544E03 /* a2a3-selectortramps-arm.s in Sources */,
 				05295B6B277E076800544E03 /* redEnvelopeDylib.mm in Sources */,
 				05295B95277E076800544E03 /* LLDBTools.mm in Sources */,
 				05295B87277E076800544E03 /* a2a3-selectortramps-x86_64.s in Sources */,
-				05295BBB277E08AE00544E03 /* HBSettingPageController.m in Sources */,
+				05295BBB277E08AE00544E03 /* HBSettingsController.m in Sources */,
 				05295BA3277E076800544E03 /* redEnvelopeDylib.m in Sources */,
 				05295B78277E076800544E03 /* MDMethodTrace.m in Sources */,
 			);
@@ -749,7 +751,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = NB7WMC2L2D;
+				DEVELOPMENT_TEAM = MHCQN227X4;
 				ENABLE_BITCODE = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
@@ -761,7 +763,7 @@
 				MONKEYDEV_TARGET_APP = Optional;
 				PODS_CONFIGURATION_BUILD_DIR = "$BUILD_DIR/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
 				PODS_ROOT = "${SRCROOT}/Pods";
-				PRODUCT_BUNDLE_IDENTIFIER = com.hibo.redEnvelope;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hibo.redEnvelope1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -773,7 +775,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = NB7WMC2L2D;
+				DEVELOPMENT_TEAM = MHCQN227X4;
 				ENABLE_BITCODE = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
@@ -785,7 +787,7 @@
 				MONKEYDEV_TARGET_APP = Optional;
 				PODS_CONFIGURATION_BUILD_DIR = "$BUILD_DIR/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
 				PODS_ROOT = "${SRCROOT}/Pods";
-				PRODUCT_BUNDLE_IDENTIFIER = com.hibo.redEnvelope;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hibo.redEnvelope1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";

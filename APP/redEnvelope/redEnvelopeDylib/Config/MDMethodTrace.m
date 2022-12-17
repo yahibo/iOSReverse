@@ -484,7 +484,7 @@ typedef NS_ENUM(NSUInteger, MDTraceSource) {
 #ifdef USE_DDLOG
     // 外部Lumberjack logger, 日志存放于目录"~/Library/Caches/Logs"
     [DDLog addLogger:[DDTTYLogger sharedInstance]]; // TTY = Xcode 控制台
-    // [[DDTTYLogger sharedInstance] setColorsEnabled:YES];
+    // [[DDTTYLogger sharedInstance] HBSetColorsEnabled:YES];
     // [DDLog addLogger:[DDASLLogger sharedInstance]]; // ASL = Apple System Logs 苹果系统日志
     
     DDFileLogger *fileLogger = [[DDFileLogger alloc] init]; // 本地文件日志

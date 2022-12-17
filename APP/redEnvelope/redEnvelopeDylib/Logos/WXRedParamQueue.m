@@ -24,11 +24,11 @@
     return instance;
 }
 
--(void)enqueue:(NSMutableDictionary *)param {
+- (void)enqueue:(NSMutableDictionary *)param {
     [self.queue addObject:param];
 }
 
--(NSMutableDictionary *)dequeue {
+- (NSMutableDictionary *)dequeue {
     if (self.queue.count == 0 && !self.queue.firstObject) return nil;
     NSMutableDictionary * first = self.queue.firstObject;
     [self.queue removeObjectAtIndex:0];

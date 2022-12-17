@@ -1,73 +1,89 @@
 //
-//  HBTestPage.m
+//  HBFloatView.m
 //  redEnvelopeDylib
 //
 //  Created by hibo on 2021/12/30.
 //
 
-#import "HBTestPage.h"
-#import "HBSettingPageController.h"
+#import "HBFloatView.h"
+#import "WXHeader.h"
+#import "HBSettingsController.h"
 
-#define screen_width UIScreen.mainScreen.bounds.size.width
-#define screen_height UIScreen.mainScreen.bounds.size.height
+@interface HBFloatView ()
 
-static CGFloat HBTestPageStatusBarHeight(void) {
-    if (@available(iOS 13.0, *)) {
-        return UIApplication.sharedApplication.statusBarFrame.size.height;
-    }
-    return 0;
-}
-
-@interface HBTestPage ()
-
-@property (nonatomic, strong) UILabel *label;
-
+@property (nonatomic, strong) UIButton *setButton;
 @property (nonatomic, assign) BOOL slideFlag;
 
 @end
 
-@implementation HBTestPage
+@implementation HBFloatView
 
 +(instancetype)sharadInstance {
     static dispatch_once_t onceToken;
     static id instance;
     dispatch_once(&onceToken, ^{
-        instance = [HBTestPage createHBTestPageWithFrame:CGRectMake(screen_width - 70, HBTestPageStatusBarHeight(), 60, 44)];
+        instance = [HBFloatView createHBFloatViewWithFrame:CGRectMake(SCREEN_WIDTH - 70, StatusBarHeight(), 60, 44)];
     });
     return instance;
 }
 
-+ (instancetype)createHBTestPageWithFrame:(CGRect)frame {
++ (instancetype)createHBFloatViewWithFrame:(CGRect)frame {
     UIWindow *window = UIApplication.sharedApplication.delegate.window;
     UITabBarController *tabbar = (UITabBarController*)window.rootViewController;
     UIViewController *ctr = tabbar.viewControllers.firstObject;
     if ([ctr isKindOfClass:UINavigationController.class]) {
         ctr = [(UINavigationController *)ctr viewControllers].firstObject;
     }
-    HBTestPage *view = [[HBTestPage alloc] initWithFrame:frame];
+    HBFloatView *view = [[HBFloatView alloc] initWithFrame:frame];
     [ctr.view addSubview:view];
     return view;
+}
+
++ (void)HBToast:(NSString *)str {
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(20, SCREEN_HEIGHT/2.0, SCREEN_WIDTH - 40, 100)];
+    label.text = [NSString stringWithFormat:@"  %@  ", str];
+    label.textColor = [UIColor whiteColor];
+    label.backgroundColor = [UIColor grayColor];
+    label.textAlignment = NSTextAlignmentCenter;
+    [label sizeToFit];
+    CGRect rect = label.frame;
+    label.frame = CGRectMake((SCREEN_WIDTH - rect.size.width)/2.0, (SCREEN_HEIGHT - rect.size.height)/2.0, rect.size.width +10, rect.size.height + 20);
+    label.layer.cornerRadius = 10;
+    label.layer.masksToBounds = YES;
+    
+    UIWindow *window = UIApplication.sharedApplication.windows.lastObject;
+    [window addSubview:label];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [label removeFromSuperview];
+    });
 }
 
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
         self.backgroundColor = [UIColor clearColor];
-        self.label = [[UILabel alloc] initWithFrame:self.bounds];
-        self.label.textAlignment = NSTextAlignmentCenter;
-        self.label.text = @"设置";
-        [self addSubview:self.label];
-        
-        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapEvent)];
-        [self addGestureRecognizer:tap];
+        self.setButton.frame = self.bounds;
+        [self.setButton addTarget:self action:@selector(setClick) forControlEvents:UIControlEventTouchUpInside];
+        [self addSubview:self.setButton];
     }
     return self;
 }
 
-- (void)tapEvent {
-    HBSettingPageController *setPage = [HBSettingPageController new];
-    setPage.modalPresentationStyle = UIModalPresentationFullScreen;
-    [UIApplication.sharedApplication.delegate.window.rootViewController presentViewController:setPage animated:YES completion:nil];
+- (void)setClick {
+    HBSettingsController *setPage = [HBSettingsController new];
+    setPage.title = self.setButton.titleLabel.text;
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:setPage];
+//    nav.modalPresentationStyle = UIModalPresentationFullScreen;
+    [RootController presentViewController:nav animated:YES completion:nil];
+}
+
+- (UIButton *)setButton {
+    if (!_setButton) {
+        _setButton = [UIButton buttonWithType:UIButtonTypeSystem];
+        [_setButton setTitleColor:HBSetColor([UIColor blackColor], [UIColor whiteColor]) forState:UIControlStateNormal];
+        [_setButton setTitle:@"设置" forState:UIControlStateNormal];
+    }
+    return _setButton;
 }
 
 @end

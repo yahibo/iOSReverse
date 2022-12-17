@@ -11,9 +11,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface WXRedParamQueue : NSObject
 
-+(instancetype)sharadInstance;
--(void)enqueue:(NSMutableDictionary *)param;
--(NSMutableDictionary *)dequeue;
++ (instancetype)sharadInstance;
+- (void)enqueue:(NSMutableDictionary *)param;
+- (NSMutableDictionary *)dequeue;
 
 @end
 

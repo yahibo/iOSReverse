@@ -1,5 +1,5 @@
 //
-//  HBFloatView.h
+//  HBSettingsController.h
 //  redEnvelopeDylib
 //
 //  Created by hibo on 2021/12/30.
@@ -9,11 +9,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface HBFloatView : UIView
-
-+ (instancetype)sharadInstance;
-
-+ (void)HBToast:(NSString *)string;
+@interface HBSettingsController : UIViewController
 
 @end
 
