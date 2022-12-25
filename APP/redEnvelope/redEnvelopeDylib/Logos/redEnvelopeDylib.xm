@@ -132,9 +132,11 @@
 #pragma mark - 撤销一条消息
 - (void)onNewSyncNotAddDBMessage:(CMessageWrap *)msgWrap {
     %log;
-    if([[HBDefaults objectForKey:WX_MESSAGE_DELETED_SWITCH] intValue] == 1) {
+    NSString *m_nsPushTitle = [msgWrap m_nsPushTitle];
+    BOOL isDelete = [[HBDefaults objectForKey:WX_MESSAGE_DELETED_SWITCH] intValue] == 1;
+    if(isDelete && m_nsPushTitle) {
         NSLog(@"====》对方回撤了消息，但被阻止了");
-        NSString *str = [NSString stringWithFormat:@"\"%@\"想撤回一条消息，被我拒绝了", [msgWrap m_nsPushTitle]];
+        NSString *str = [NSString stringWithFormat:@"\"%@\"想撤回一条消息，被我拒绝了", m_nsPushTitle];
         HBToast(str);
     } else {
         %orig;

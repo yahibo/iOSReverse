@@ -44,6 +44,7 @@
 		05295BB7277E087F00544E03 /* HBFloatView.m in Sources */ = {isa = PBXBuildFile; fileRef = 05295BB5277E087F00544E03 /* HBFloatView.m */; };
 		05295BBA277E08AE00544E03 /* HBSettingsController.h in Headers */ = {isa = PBXBuildFile; fileRef = 05295BB8277E08AE00544E03 /* HBSettingsController.h */; };
 		05295BBB277E08AE00544E03 /* HBSettingsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 05295BB9277E08AE00544E03 /* HBSettingsController.m */; };
+		055E4E5E29580FD9007360B9 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 055E4E5D29580FD9007360B9 /* HealthKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -116,6 +117,8 @@
 		05295BB8277E08AE00544E03 /* HBSettingsController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HBSettingsController.h; sourceTree = "<group>"; };
 		05295BB9277E08AE00544E03 /* HBSettingsController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HBSettingsController.m; sourceTree = "<group>"; };
 		052EADD8294DDBDB00DC614C /* HBCommon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HBCommon.h; sourceTree = "<group>"; };
+		055E4E5C29580FD9007360B9 /* redEnvelope.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = redEnvelope.entitlements; sourceTree = "<group>"; };
+		055E4E5D29580FD9007360B9 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +126,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				055E4E5E29580FD9007360B9 /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -161,6 +165,7 @@
 		05295B4D277E076800544E03 /* redEnvelope */ = {
 			isa = PBXGroup;
 			children = (
+				055E4E5C29580FD9007360B9 /* redEnvelope.entitlements */,
 				05295B4E277E076800544E03 /* icon.png */,
 				05295B56277E076800544E03 /* Info.plist */,
 				05295B4F277E076800544E03 /* Scripts */,
@@ -197,6 +202,7 @@
 		05295B60277E076800544E03 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				055E4E5D29580FD9007360B9 /* HealthKit.framework */,
 				05295B61277E076800544E03 /* JavaScriptCore.framework */,
 				05295B63277E076800544E03 /* Foundation.framework */,
 				05295B65277E076800544E03 /* UIKit.framework */,
@@ -749,9 +755,11 @@
 		05295BAA277E076800544E03 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ALLOW_ENTITLEMENTS_MODIFICATION = " YES";
+				CODE_SIGN_ENTITLEMENTS = redEnvelope/redEnvelope.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = MHCQN227X4;
+				DEVELOPMENT_TEAM = NB7WMC2L2D;
 				ENABLE_BITCODE = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
@@ -763,7 +771,7 @@
 				MONKEYDEV_TARGET_APP = Optional;
 				PODS_CONFIGURATION_BUILD_DIR = "$BUILD_DIR/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
 				PODS_ROOT = "${SRCROOT}/Pods";
-				PRODUCT_BUNDLE_IDENTIFIER = com.hibo.redEnvelope1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hibo.redEnvelope;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -773,9 +781,11 @@
 		05295BAB277E076800544E03 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ALLOW_ENTITLEMENTS_MODIFICATION = " YES";
+				CODE_SIGN_ENTITLEMENTS = redEnvelope/redEnvelope.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = MHCQN227X4;
+				DEVELOPMENT_TEAM = NB7WMC2L2D;
 				ENABLE_BITCODE = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
@@ -787,7 +797,7 @@
 				MONKEYDEV_TARGET_APP = Optional;
 				PODS_CONFIGURATION_BUILD_DIR = "$BUILD_DIR/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
 				PODS_ROOT = "${SRCROOT}/Pods";
-				PRODUCT_BUNDLE_IDENTIFIER = com.hibo.redEnvelope1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hibo.redEnvelope;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
